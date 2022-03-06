@@ -2,6 +2,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
+import AddImage from "./components/addImage";
 
 import Header from "./components/header";
 import Home from "./components/home";
@@ -29,9 +30,9 @@ function App() {
         <Routes>
           <Route element={<Home />} path="/home" />
           <Route element={<Login />} path="/login" />
-          
+
           <Route element={<Signup />} path="/signup" />
-          
+          <Route element={<AddImage />} path="/addimage" />
 
           {/* Redirecting from / to /home */}
           <Route path="/" element={<Navigate replace to="/home" />} />

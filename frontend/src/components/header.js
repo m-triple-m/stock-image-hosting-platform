@@ -42,11 +42,10 @@ const Header = (props) => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/event"
+                to="/signup"
                 activeClassName="active"
                 className="nav-link"
               >
-
                 Sign Up
               </NavLink>
             </li>
@@ -56,11 +55,10 @@ const Header = (props) => {
                 activeClassName="active"
                 className="nav-link"
               >
-               Manage Users
+                Manage Users
               </NavLink>
             </li>
             <li className="nav-item">
-
               <Switch
                 checked={props.darkTheme}
                 onChange={(e, v) => {
