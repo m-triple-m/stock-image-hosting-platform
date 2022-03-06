@@ -1,13 +1,14 @@
 import { Formik } from "formik";
 import { Button, Card, CardContent } from "@mui/material";
-import GoogleIcon from "@mui/icons-material/Google";
 
 import "./signup.css";
 import app_config from "../config";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const url = app_config.api_url;
+  const navigate = useNavigate();
 
   // Two important thing to use with Formik
   // 1. formObject
@@ -53,6 +54,7 @@ const Login = () => {
       })
       .then((data) => {
         console.log(data);
+        navigate("/");
       });
   };
 
